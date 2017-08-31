@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -eu
+
+REPO=$(echo $IMAGE_NAME | cut -d : -f 1)
+
+while read TAG; do
+    docker tag $IMAGE_NAME $REPO:$TAG
+    docker push $REPO:$TAG
+done <tags
