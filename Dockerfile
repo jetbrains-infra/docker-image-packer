@@ -1,9 +1,9 @@
 FROM alpine:3.6
 
-ARG PACKER_VERSION=1.1.2
+ARG PACKER_VERSION=1.1.3
 
 ARG VSPHERE_VERSION=1.5
-ARG TEAMCITY_VERSION=0.1
+ARG TEAMCITY_VERSION=1.0
 
 RUN apk update && \
     apk add ca-certificates wget && \
