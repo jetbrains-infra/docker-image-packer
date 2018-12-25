@@ -1,0 +1,27 @@
+{
+  "builders": [
+    {
+      "type": "vsphere-iso",
+      "vcenter_server": "test",
+      "username": "test",
+      "password": "test",
+      "vm_name": "test",
+      "host": "test",
+      "ssh_username": "test",
+      "disk_size": 1
+    },
+    {
+      "type": "vsphere-clone",
+      "vcenter_server": "test",
+      "username": "test",
+      "password": "test",
+      "template": "test",
+      "vm_name": "test",
+      "host": "test",
+      "ssh_username": "test"
+    }
+  ],
+  "post-processors": [
+    "teamcity"
+  ]
+}
