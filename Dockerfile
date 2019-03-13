@@ -16,5 +16,6 @@ RUN wget -nv https://github.com/JetBrains/packer-post-processor-teamcity/release
 RUN chmod +x /out/*
 
 FROM alpine:3.8
+COPY --from=0 /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=0 /out/* /usr/local/bin/
 ENTRYPOINT ["packer"]
